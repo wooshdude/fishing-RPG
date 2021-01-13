@@ -32,7 +32,7 @@ func make_direction(player_direction):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	velocity.x = lerp(velocity.x, 0, .02)
+	velocity.x = lerp(velocity.x, 0, delta)
 	if position.y > player.position.y + 12:
 		velocity = Vector2.ZERO
 		collision.disabled = false
